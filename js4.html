@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            .content{
+                width: 300px;
+                height: 300px;
+                background-color: blueviolet;
+                margin: 40px;
+                padding: 30px;
+
+            }
+            button{
+                margin-left: 70px;
+            }
+        </style>
+                <script>
+                    var arr=[];
+                        function Divided(){
+                            var num1=parseInt(document.getElementById('numn1').vlue);
+                            var num2=parseInt(document.getElementById('numn2').vlue);
+                            for( var i=num1;i<=num2;i++)
+                            {
+                                if(i%2==0 && i%5==0)
+                                { 
+                                    arr.push(i);
+                                }
+                                    
+                                }
+                                console.log(arr);
+                                document.getElementById("deo").innerHTML+=arr.join(",");
+                            }
+                        
+                    </script>
+    </head>
+    <body>
+        <div class="content">
+        <form>
+            <label>From</label>
+            <input type="number" placeholder="First num" id="numn1"><br>
+            <label>To</label>
+            <input type="number" placeholder="last num" id="numn2"><br>
+            <button type="button" onclick="Divided()">Divided By 2&5</button>
+        </form>
+        <h3>Result</h3>
+<label id="deo"></label>
+        </div>
+
+    </body>
+</html>
